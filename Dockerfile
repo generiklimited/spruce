@@ -1,5 +1,5 @@
 FROM golang:alpine as build
-RUN apk --no-cache add git
+RUN apk --no-cache add git bash
 COPY . /go/src/github.com/geofffranks/spruce
 RUN cd /go/src/github.com/geofffranks/spruce && \
     CGOENABLED=0 go build \
